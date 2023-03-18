@@ -1,0 +1,37 @@
+package eje.pkg14.act2;
+import java.util.Scanner;
+public class Eje14Act2 {
+    public static void main(String[] args) {
+        double venta1, venta2, venta3, salario, salario1,salario2,salario3, ventas_totales,por_ventas;
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Ventas departamento 1: ");
+        venta1 = teclado.nextDouble();
+        System.out.print("Ventas departamento 2: ");
+        venta2 = teclado.nextDouble();
+        System.out.print("Ventas departamento 3: ");
+        venta3 = teclado.nextDouble();
+        System.out.print("Salario vendedores: ");
+        salario = teclado.nextDouble();
+        
+        ventas_totales = venta1 + venta2 + venta3;
+        por_ventas = 0.33 * ventas_totales;
+        if (venta1 > por_ventas){
+            salario1 = salario + salario*0.2;
+        } else{
+            salario1 = salario;
+        }
+        if (venta2 > por_ventas){
+            salario2 = salario + salario*0.2;
+        } else{
+            salario2 = salario;
+        }
+        if (venta3 > por_ventas){
+            salario3 = salario + salario*0.2;
+        } else{
+            salario3 = salario;
+        }
+        System.out.println("Salario de vendedores del departamento 1: " + salario1);
+        System.out.println("Salario de vendedores del departamento 2: " + salario2);
+        System.out.println("Salario de vendedores del departamento 3: " + salario3);
+    }
+}
